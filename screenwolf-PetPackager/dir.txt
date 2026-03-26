@@ -1,7 +1,0 @@
-jdk
-lib/
-    screenwolf-x.x.x.jar
-    ...
-maven
-output
-repo
