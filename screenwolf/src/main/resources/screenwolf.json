@@ -1,6 +1,6 @@
 {
     "title": "ScreenWolf",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "owner": "小蓝狗周周 pinkcandyzhou",
     "info": "屏幕有狼是一款基于 Java Swing 的桌面宠物游戏，玩家能在桌面上放置可交互的虚拟宠物。游戏支持加载新宠物，每只宠物拥有独立的动画、数值和行为逻辑。也就是说，所有宠物均可自定义！\n\nScreenWolf is a desktop pet game based on Java Swing, where players can place interactive virtual pets on the desktop. The game supports loading new pets, each with independent animations, values, and behavioral logic. That means all pets can be customized!\n\ngithub: https://github.com/ZhouZhou1235/ScreenWolf\n2025.5.16"
 }

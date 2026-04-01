@@ -221,8 +221,9 @@ public class WelcomeWindow extends WindowBase {
         setupPetEntryPanelStyle(petEntryPanel);
         JPanel leftPanel = createPetIconPanel(jarPath);
         JPanel rightPanel = createPetInfoPanel(jarPath, petData);
-        int minHeight = GUtil.DEFAULT_textSize * 6;
+        int minHeight = GUtil.DEFAULT_textSize * 8;
         petEntryPanel.setMinimumSize(new Dimension(0, minHeight));
+        petEntryPanel.setPreferredSize(new Dimension(0, minHeight + GUtil.DEFAULT_textSize));
         petEntryPanel.add(leftPanel,BorderLayout.WEST);
         petEntryPanel.add(rightPanel,BorderLayout.CENTER);
         return petEntryPanel;

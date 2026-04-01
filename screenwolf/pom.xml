@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ScreenWolf POM配置文件 -->
+<!-- ScreenWolf Game -->
 <project
     xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -10,7 +10,7 @@
 
     <groupId>com.pinkcandy</groupId>
     <artifactId>screenwolf</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <packaging>jar</packaging>
     <name>ScreenWolf</name>
     <description>a desktop pet game by pinkcandyzhou</description>

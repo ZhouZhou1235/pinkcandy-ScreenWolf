@@ -25,6 +25,8 @@ public class PetOption extends WindowBase {
     protected JPanel buttonPanel;
     protected GridBagConstraints buttonGrid;
     protected int buttonsPerRow = 5; // 每行按钮数
+    protected Color backgroundColor = new Color(0, 0, 0, 200); // 背景颜色
+    protected Color textColor = new Color(250,250,250); // 文本颜色
     public PetOption(PetBase thePet){
         super(
             thePet.getPetData().getName(),
@@ -34,6 +36,7 @@ public class PetOption extends WindowBase {
             )
         );
         this.pet = thePet;
+        this.setIconImage(ResourceReader.getResourceAsImageIcon("images/pet.png").getImage());
         initWindow();
         readyToPaint();
     }
@@ -49,7 +52,7 @@ public class PetOption extends WindowBase {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setUndecorated(true);
         this.setAlwaysOnTop(true);
-        this.setBackground(new Color(0, 0, 0, 200));
+        this.setBackground(backgroundColor);
         this.setLayout(new BorderLayout(5, 5));
         // 创建顶部面板
         JPanel topPanel = new JPanel(new BorderLayout(10, 0));
@@ -66,21 +69,21 @@ public class PetOption extends WindowBase {
         // 宠物名称
         JLabel nameLabel = new JLabel(pet.getPetData().getName());
         nameLabel.setFont(GUtil.DEFAULT_font.deriveFont(Font.BOLD, GUtil.DEFAULT_textSize));
-        nameLabel.setForeground(new Color(250,250,250));
+        nameLabel.setForeground(textColor);
         nameLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         infoPanel.add(nameLabel);
         infoPanel.add(Box.createRigidArea(new Dimension(0, 5)));
         // 状态信息1
         statusLabel1 = new JLabel();
         statusLabel1.setFont(GUtil.DEFAULT_font.deriveFont(Font.PLAIN, (int)(GUtil.DEFAULT_textSize * 0.9)));
-        statusLabel1.setForeground(new Color(240, 240, 240));
+        statusLabel1.setForeground(textColor);
         statusLabel1.setAlignmentX(Component.LEFT_ALIGNMENT);
         infoPanel.add(statusLabel1);
         infoPanel.add(Box.createRigidArea(new Dimension(0, 2)));
         // 状态信息2
         statusLabel2 = new JLabel();
         statusLabel2.setFont(GUtil.DEFAULT_font.deriveFont(Font.PLAIN, (int)(GUtil.DEFAULT_textSize * 0.8)));
-        statusLabel2.setForeground(new Color(230, 230, 230));
+        statusLabel2.setForeground(textColor);
         statusLabel2.setAlignmentX(Component.LEFT_ALIGNMENT);
         infoPanel.add(statusLabel2);
         topPanel.add(infoPanel, BorderLayout.CENTER);
@@ -165,15 +168,15 @@ public class PetOption extends WindowBase {
     // 更新状态文本
     public void updateStatusText(){
         if(pet.getPlayPetData()==null){return;}
-        String statusText1 = String.format("等级 level:%d %s",
-            pet.getPlayPetData().getAffectionLevel(),
-            pet.animationSprite.currentAnimation
-        );
-        String statusText2 = String.format("%d+%d | %d+%d",
+        String statusText1 = String.format("%d+%d | %d+%d",
             pet.getPlayPetData().getGlobalKeyPressCount(),
             pet.getLauncher().getGlobalInputListener().getKeyPressCount(),
             pet.getPlayPetData().getGlobalMouseClickCount(),
             pet.getLauncher().getGlobalInputListener().getMousePressCount()
+        );
+        String statusText2 = String.format("%d %s",
+            pet.getPlayPetData().getAffectionLevel(),
+            pet.animationSprite.currentAnimation
         );
         statusLabel1.setText(statusText1);
         statusLabel2.setText(statusText2);
