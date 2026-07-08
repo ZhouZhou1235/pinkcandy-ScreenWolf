@@ -11,6 +11,6 @@
 也就是说，所有宠物均可自定义！
 
 ## 游戏下载
-1. github [github发行版](https://github.com/ZhouZhou1235/ScreenWolf/releases)
-2. Steam [Steam商店页](https://store.steampowered.com/app/3875700)
-3. itch [itch页面](https://pinkcandyzhou.itch.io/screen-wolf)
+1. github [github](https://github.com/ZhouZhou1235/ScreenWolf/releases)
+2. Steam [Steam](https://store.steampowered.com/app/3875700)
+3. itch [itch](https://pinkcandyzhou.itch.io/screen-wolf)

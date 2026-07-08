@@ -1,8 +1,8 @@
 {
     "id": "screenwolf_demo",
     "mainClass": "com.pinkcandy.screenwolf_demo.Pet",
-    "name": "小灰狼 Pet Demo",
-    "info": "这只宠物是游戏的标准演示，没有添加额外的逻辑。This pet is a standard demonstration of the game without adding any additional logic.",
+    "name": "小灰狼 PetDemo",
+    "info": "这只宠物是游戏的标准演示 This pet is a standard demonstration of the game.",
     "specialMessages":[],
     "sadMessages":[]
 }
